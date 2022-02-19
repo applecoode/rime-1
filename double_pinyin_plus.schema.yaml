@@ -58,7 +58,7 @@ engine:
     - table_translator@zrm2000
     - script_translator
   filters:
-    - simplifier@emoji_suggestion
+    #- simplifier@emoji_suggestion
     - simplifier
     - uniquifier
 
@@ -166,10 +166,18 @@ punctuator:
 key_binder:
   import_preset: default
   bindings:
-    - { when: has_menu, accept: bracketleft, send: Page_Up } # 前翻页键 "["
-    - { when: has_menu, accept: bracketright, send: Page_Down } # 后翻页键 "]"
-    - { when: has_menu, accept: comma, send: comma } # 禁用前翻页键 "."
-    - { when: has_menu, accept: period, send: period } # 禁用后翻页键 ","
+    #- { when: has_menu, accept: bracketleft, send: Page_Up } # 前翻页键 "["
+    #- { when: has_menu, accept: bracketright, send: Page_Down } # 后翻页键 "]"
+    #- { when: has_menu, accept: comma, send: comma } # 禁用前翻页键 "."
+    #- { when: has_menu, accept: period, send: period } # 禁用后翻页键 ","
+    - { when: has_menu, accept: Control+b, send: Left } #
+    - { when: has_menu, accept: Control+f, send: Right } #
+    - { when: has_menu, accept: Control+n, send: Down } #
+    - { when: has_menu, accept: Control+p, send: Up } #
+    - { when: has_menu, accept: comma, send: Page_Up } # 前翻页键 "["
+    - { when: has_menu, accept: period, send: Page_Down } # 后翻页键 "]"
+    - { when: has_menu, accept: semicolon, send: 2 } #
+    - { when: has_menu, accept: apostrophe, send: 3 } #
 
 recognizer:
   import_preset: default

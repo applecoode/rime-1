@@ -29,6 +29,7 @@ switches:
     reset: 1
     states: [ 漢字, 汉字 ]
   - name: ascii_punct
+    reset: 1 #默认英文标点
     states: [ 。，, ．， ]
   - name: emoji_suggestion
     reset: 1

@@ -2,9 +2,13 @@ patch:
   # 扩充词库
   translator/dictionary: luna_pinyin.extended
 
+  # 去除自动完成,以免影响三码单字
+  translator/enable_completion: false
+
   # 扩充符号库
   punctuator/import_preset: symbols
   recognizer/patterns/punct: "^/([A-Z|a-z]*|[0-9]|10)$"
+
 
   # 自动造句 (阴阳鱼☯️️ 图标)
   zrm2000/enable_sentence: true
